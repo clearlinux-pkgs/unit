@@ -1,0 +1,29 @@
+From 5d040b3fb483fe3fc3115b2f2ca59e18e51215f3 Mon Sep 17 00:00:00 2001
+From: Auke Kok <auke-jan.h.kok@intel.com>
+Date: Thu, 29 Aug 2019 10:03:26 -0700
+Subject: [PATCH unit] Ignore ignorant exit code.
+
+---
+ auto/options | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+diff --git a/auto/options b/auto/options
+index 0d31aba..75348f7 100644
+--- a/auto/options
++++ b/auto/options
+@@ -99,11 +99,7 @@ do
+         ;;
+ 
+         *)
+-            $echo
+-            $echo $0: error: invalid option \"$nxt_option\".
+-            $echo Run \"$0 --help\" to see available options.
+-            $echo
+-            exit 1
++            :
+         ;;
+     esac
+ 
+-- 
+2.23.0
+

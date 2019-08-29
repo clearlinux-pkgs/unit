@@ -1,0 +1,4 @@
+./configure python --config=python3-config
+./configure php --config=php-config
+make DESTDIR=%{buildroot} python3-install
+make DESTDIR=%{buildroot} php-install
