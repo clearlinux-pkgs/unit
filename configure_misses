@@ -16,3 +16,4 @@ Configure miss: fcntl(F_READAHEAD)
 Configure miss: fcntl(F_RDAHEAD) 
 Configure miss: dlopen() 
 Configure miss: setproctitle() 
+Configure miss: PHP Zend Thread Safety 
