@@ -2,4 +2,5 @@
 # picked up automatically. One name per line, no whitespace.
 openssl-dev
 buildreq-php
+pcre2-dev
 php-extras-libphp
