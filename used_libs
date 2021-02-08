@@ -8,6 +8,6 @@ libm.so.6
 libpcre2-8.so.0
 libphp7.so
 libpthread.so.0
-libpython3.8.so.1.0
+libpython3.9.so.1.0
 libssl.so.1.1
 libutil.so.1
