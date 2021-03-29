@@ -1,19 +1,19 @@
-Configure miss: MAP_PREFAULT_READ 
-Configure miss: shm_open() 
-Configure miss: shm_open(SHM_ANON) 
-Configure miss: FreeBSD clock_gettime(CLOCK_REALTIME_FAST) 
-Configure miss: FreeBSD clock_gettime(CLOCK_MONOTONIC_FAST) 
-Configure miss: HP-UX hg_gethrtime() 
-Configure miss: altzone 
-Configure miss: sem_timedwait() 
-Configure miss: kqueue 
-Configure miss: Solaris event port 
 Configure miss: /dev/poll 
 Configure miss: AIX pollset 
+Configure miss: FreeBSD clock_gettime(CLOCK_MONOTONIC_FAST) 
+Configure miss: FreeBSD clock_gettime(CLOCK_REALTIME_FAST) 
+Configure miss: HP-UX hg_gethrtime() 
+Configure miss: MAP_PREFAULT_READ 
+Configure miss: PHP Zend Thread Safety 
+Configure miss: Solaris event port 
+Configure miss: altzone 
+Configure miss: dlopen() 
+Configure miss: fcntl(F_RDAHEAD) 
+Configure miss: fcntl(F_READAHEAD) 
+Configure miss: kqueue 
+Configure miss: sem_timedwait() 
+Configure miss: setproctitle() 
+Configure miss: shm_open() 
+Configure miss: shm_open(SHM_ANON) 
 Configure miss: sockaddr.sa_len 
 Configure miss: sys/filio.h 
-Configure miss: fcntl(F_READAHEAD) 
-Configure miss: fcntl(F_RDAHEAD) 
-Configure miss: dlopen() 
-Configure miss: setproctitle() 
-Configure miss: PHP Zend Thread Safety 
