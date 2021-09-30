@@ -1,1 +1,2 @@
 0001-Ignore-ignorant-exit-code.patch
+0002-Fixing-build-with-glibc-2.34.patch

@@ -1,0 +1,60 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Max Romanov <max.romanov@nginx.com>
+Date: Tue, 14 Sep 2021 19:35:49 +0300
+Subject: [PATCH] Fixing build with glibc 2.34.
+
+Explicitly using the sysconf() call to obtain the minimum thread stack size
+instead of the PTHREAD_STACK_MIN macro.
+
+This closes #576 PR on GitHub.
+
+Upstream-Status: Backport
+Reference: https://github.com/nginx/unit/commit/d21ebcce83
+Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
+---
+ src/nxt_conf_validation.c | 7 ++++---
+ src/nxt_thread.h          | 8 --------
+ 2 files changed, 4 insertions(+), 11 deletions(-)
+
+diff --git a/src/nxt_conf_validation.c b/src/nxt_conf_validation.c
+index a53fff7..18c2d47 100644
+--- a/src/nxt_conf_validation.c
++++ b/src/nxt_conf_validation.c
+@@ -1733,14 +1733,15 @@ static nxt_int_t
+ nxt_conf_vldt_thread_stack_size(nxt_conf_validation_t *vldt,
+     nxt_conf_value_t *value, void *data)
+ {
+-    int64_t  size;
++    int64_t  size, min_size;
+ 
+     size = nxt_conf_get_number(value);
++    min_size = sysconf(_SC_THREAD_STACK_MIN);
+ 
+-    if (size < NXT_THREAD_STACK_MIN) {
++    if (size < min_size) {
+         return nxt_conf_vldt_error(vldt, "The \"thread_stack_size\" number "
+                                    "must be equal to or greater than %d.",
+-                                   NXT_THREAD_STACK_MIN);
++                                   min_size);
+     }
+ 
+     if ((size % nxt_pagesize) != 0) {
+diff --git a/src/nxt_thread.h b/src/nxt_thread.h
+index d7800cc..2ebc331 100644
+--- a/src/nxt_thread.h
++++ b/src/nxt_thread.h
+@@ -142,14 +142,6 @@ nxt_thread_yield()                                                            \
+ #endif
+ 
+ 
+-#if (PTHREAD_STACK_MIN)
+-#define NXT_THREAD_STACK_MIN  PTHREAD_STACK_MIN
+-
+-#else
+-#define NXT_THREAD_STACK_MIN  sysconf(_SC_THREAD_STACK_MIN)
+-#endif
+-
+-
+ struct nxt_thread_s {
+     nxt_log_t                *log;
+     nxt_log_t                main_log;
