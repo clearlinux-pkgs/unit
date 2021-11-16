@@ -4,7 +4,7 @@
 #
 Name     : unit
 Version  : 1.25.0.1
-Release  : 13
+Release  : 14
 URL      : https://github.com/nginx/unit/archive/1.25.0-1/unit-1.25.0.1.tar.gz
 Source0  : https://github.com/nginx/unit/archive/1.25.0-1/unit-1.25.0.1.tar.gz
 Source1  : unitd.service
