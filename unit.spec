@@ -4,7 +4,7 @@
 #
 Name     : unit
 Version  : 1.25.0.1
-Release  : 14
+Release  : 15
 URL      : https://github.com/nginx/unit/archive/1.25.0-1/unit-1.25.0.1.tar.gz
 Source0  : https://github.com/nginx/unit/archive/1.25.0-1/unit-1.25.0.1.tar.gz
 Source1  : unitd.service
@@ -21,7 +21,7 @@ BuildRequires : openssl-dev
 BuildRequires : pcre2-dev
 BuildRequires : python3-dev
 Patch1: 0001-Ignore-ignorant-exit-code.patch
-Patch2: 0002-Fixing-build-with-glibc-2.34.patch
+Patch2: backport-Fixing-build-with-glibc-2.34.patch
 
 %description
 NGINX Unit
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1633044466
+export SOURCE_DATE_EPOCH=1649480117
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -97,7 +97,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1633044466
+export SOURCE_DATE_EPOCH=1649480117
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/unit
 cp %{_builddir}/unit-1.25.0-1/LICENSE %{buildroot}/usr/share/package-licenses/unit/04319952ed7b0f3b3a70ae4d5d9f954317b8f970
