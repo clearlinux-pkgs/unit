@@ -13,4 +13,5 @@ Configure miss: kqueue
 Configure miss: setproctitle() 
 Configure miss: shm_open(SHM_ANON) 
 Configure miss: sockaddr.sa_len 
+Configure miss: struct cmsgcred 
 Configure miss: sys/filio.h 
