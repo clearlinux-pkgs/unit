@@ -4,7 +4,7 @@
 #
 Name     : unit
 Version  : 1.28.0.1
-Release  : 17
+Release  : 18
 URL      : https://github.com/nginx/unit/archive/1.28.0-1/unit-1.28.0.1.tar.gz
 Source0  : https://github.com/nginx/unit/archive/1.28.0-1/unit-1.28.0.1.tar.gz
 Source1  : unitd.service
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1663084909
+export SOURCE_DATE_EPOCH=1666737757
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -97,7 +97,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1663084909
+export SOURCE_DATE_EPOCH=1666737757
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/unit
 cp %{_builddir}/unit-1.28.0-1/LICENSE %{buildroot}/usr/share/package-licenses/unit/04319952ed7b0f3b3a70ae4d5d9f954317b8f970 || :
