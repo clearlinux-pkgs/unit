@@ -1,17 +1,33 @@
 Configure miss: /dev/poll 
+Configure miss: /dev/poll 
+Configure miss: AIX pollset 
 Configure miss: AIX pollset 
 Configure miss: FreeBSD clock_gettime(CLOCK_MONOTONIC_FAST) 
+Configure miss: FreeBSD clock_gettime(CLOCK_MONOTONIC_FAST) 
+Configure miss: FreeBSD clock_gettime(CLOCK_REALTIME_FAST) 
 Configure miss: FreeBSD clock_gettime(CLOCK_REALTIME_FAST) 
 Configure miss: HP-UX hg_gethrtime() 
+Configure miss: HP-UX hg_gethrtime() 
+Configure miss: MAP_PREFAULT_READ 
 Configure miss: MAP_PREFAULT_READ 
 Configure miss: PHP Zend Thread Safety 
 Configure miss: Solaris event port 
+Configure miss: Solaris event port 
+Configure miss: altzone 
 Configure miss: altzone 
 Configure miss: fcntl(F_RDAHEAD) 
+Configure miss: fcntl(F_RDAHEAD) 
+Configure miss: fcntl(F_READAHEAD) 
 Configure miss: fcntl(F_READAHEAD) 
 Configure miss: kqueue 
+Configure miss: kqueue 
+Configure miss: setproctitle() 
 Configure miss: setproctitle() 
 Configure miss: shm_open(SHM_ANON) 
+Configure miss: shm_open(SHM_ANON) 
+Configure miss: sockaddr.sa_len 
 Configure miss: sockaddr.sa_len 
 Configure miss: struct cmsgcred 
+Configure miss: struct cmsgcred 
+Configure miss: sys/filio.h 
 Configure miss: sys/filio.h 
