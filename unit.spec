@@ -7,7 +7,7 @@
 #
 Name     : unit
 Version  : 1.32.1.1
-Release  : 22
+Release  : 23
 URL      : https://github.com/nginx/unit/archive/1.32.1-1/unit-1.32.1.1.tar.gz
 Source0  : https://github.com/nginx/unit/archive/1.32.1-1/unit-1.32.1.1.tar.gz
 Source1  : unitd.service
